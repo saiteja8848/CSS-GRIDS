@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRIDS-Nested Grids</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 1em;
+            grid-auto-rows: auto;
+            /*justify-items: center;*/
+            border: 1px solid black;
+        }
+
+        .grid-container>div {
+            padding: 1em;
+            background-color: gray;
+        }
+
+        .grid-container>div:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        .grid-item {
+            border: 1px solid black;
+        }
+
+        #item-1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item" id="item-1">
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+        </div>
+        <div class="grid-item">Lorem ipsum</div>
+        <div class="grid-item">Lorem ipsum</div>
+        <div class="grid-item">Lorem ipsum</div>
+        <div class="grid-item">Lorem ipsum</div>
+    </div>
+
+
+</body>
+
+</html>
